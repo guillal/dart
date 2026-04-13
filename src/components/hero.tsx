@@ -18,6 +18,15 @@ export function Hero() {
       />
 
       <div className="max-w-7xl mx-auto w-full">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8 lg:mb-12"
+        >
+          {t.hero.masterTag[locale]}
+        </motion.p>
+
         <div className="space-y-2 lg:space-y-4">
           <motion.h1
             initial={{ opacity: 0, y: 60 }}
@@ -59,8 +68,7 @@ export function Hero() {
           transition={{ delay: 1.0, duration: 0.8 }}
           className="mt-6 text-sm lg:text-base uppercase tracking-[0.2em] text-muted-foreground"
         >
-          {t.hero.masterTag[locale]} · Universitat Autònoma de{" "}
-          <span className="text-yellow">Barcelona</span>
+          {t.hero.uab[locale]}
         </motion.p>
 
         <motion.div

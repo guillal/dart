@@ -1,11 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useI18n } from "@/lib/i18n";
 
 const highlights = [
   {
     number: "200+",
+    href: "/agencias",
+    external: false,
     label: {
       es: "Agencias creativas",
       ca: "Agències creatives",
@@ -19,6 +22,8 @@ const highlights = [
   },
   {
     number: "10+",
+    href: "/festivales",
+    external: false,
     label: {
       es: "Festivales internacionales",
       ca: "Festivals internacionals",
@@ -32,6 +37,8 @@ const highlights = [
   },
   {
     number: "Gaudí",
+    href: "https://ajuntament.barcelona.cat/museudeldesign/",
+    external: true,
     label: {
       es: "Herencia de diseño",
       ca: "Herència de disseny",
@@ -45,6 +52,8 @@ const highlights = [
   },
   {
     number: "30'",
+    href: "https://www.uab.cat/web/la-facultat-de-ciencies-de-la-comunicacio-1345467741498.html",
+    external: true,
     label: {
       es: "Campus UAB",
       ca: "Campus UAB",
@@ -83,26 +92,58 @@ export function Barcelona() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {highlights.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="border-l-2 border-yellow/30 pl-6 lg:pl-8 hover:border-yellow transition-colors duration-500 group"
-            >
-              <p className="font-heading font-bold text-3xl lg:text-4xl text-yellow">
-                {item.number}
-              </p>
-              <p className="font-heading font-semibold text-white text-base mt-2 group-hover:text-yellow transition-colors duration-500">
-                {item.label[locale]}
-              </p>
-              <p className="text-muted-foreground text-sm leading-relaxed mt-3">
-                {item.description[locale]}
-              </p>
-            </motion.div>
-          ))}
+          {highlights.map((item, i) => {
+            const inner = (
+              <>
+                <p className="font-heading font-bold text-3xl lg:text-4xl text-yellow">
+                  {item.number}
+                </p>
+                <p className="font-heading font-semibold text-white text-base mt-2 group-hover:text-yellow transition-colors duration-500 inline-flex items-center gap-2">
+                  {item.label[locale]}
+                  {item.external ? (
+                    <svg className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                  ) : (
+                    <svg className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  )}
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed mt-3">
+                  {item.description[locale]}
+                </p>
+              </>
+            );
+
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6 }}
+              >
+                {item.external ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block border-l-2 border-yellow/30 pl-6 lg:pl-8 hover:border-yellow transition-colors duration-500 group"
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="block border-l-2 border-yellow/30 pl-6 lg:pl-8 hover:border-yellow transition-colors duration-500 group"
+                  >
+                    {inner}
+                  </Link>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div

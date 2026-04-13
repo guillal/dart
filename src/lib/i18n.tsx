@@ -409,6 +409,52 @@ const translations = {
     ctaApply: { es: "Inscríbete", ca: "Inscriu-te", en: "Apply" },
     ctaContact: { es: "Contactar", ca: "Contactar", en: "Contact us" },
   },
+  agencies: {
+    heading: {
+      es: "Agencias creativas en Barcelona",
+      ca: "Agències creatives a Barcelona",
+      en: "Creative agencies in Barcelona",
+    },
+    description: {
+      es: "Barcelona concentra más de 200 agencias de publicidad, estudios de branding, productoras audiovisuales y consultoras creativas. Este es el ecosistema profesional en el que te moverás al terminar el máster — y donde muchos de nuestros profesores trabajan hoy.",
+      ca: "Barcelona concentra més de 200 agències de publicitat, estudis de branding, productores audiovisuals i consultores creatives. Aquest és l'ecosistema professional en el qual et mouràs en acabar el màster — i on molts dels nostres professors treballen avui.",
+      en: "Barcelona is home to over 200 advertising agencies, branding studios, audiovisual production companies and creative consultancies. This is the professional ecosystem you'll enter after the master's — and where many of our professors work today.",
+    },
+    ctaTitle: {
+      es: "Trabaja donde quieras crear",
+      ca: "Treballa on vulguis crear",
+      en: "Work where you want to create",
+    },
+    ctaDescription: {
+      es: "El máster te conecta con la industria creativa de Barcelona desde el primer día.",
+      ca: "El màster et connecta amb la indústria creativa de Barcelona des del primer dia.",
+      en: "The master's connects you with Barcelona's creative industry from day one.",
+    },
+    ctaApply: { es: "Inscríbete", ca: "Inscriu-te", en: "Apply" },
+  },
+  festivals: {
+    heading: {
+      es: "Festivales creativos en Barcelona",
+      ca: "Festivals creatius a Barcelona",
+      en: "Creative festivals in Barcelona",
+    },
+    description: {
+      es: "Barcelona es un calendario permanente de cultura visual. Estos son los festivales y eventos que convierten la ciudad en un punto de encuentro internacional para creativos, diseñadores y directores de arte.",
+      ca: "Barcelona és un calendari permanent de cultura visual. Aquests són els festivals i esdeveniments que converteixen la ciutat en un punt de trobada internacional per a creatius, dissenyadors i directors d'art.",
+      en: "Barcelona is a permanent calendar of visual culture. These are the festivals and events that turn the city into an international meeting point for creatives, designers and art directors.",
+    },
+    ctaTitle: {
+      es: "Vive la creatividad todo el año",
+      ca: "Viu la creativitat tot l'any",
+      en: "Live creativity all year round",
+    },
+    ctaDescription: {
+      es: "Estudia dirección de arte en la ciudad que nunca deja de crear.",
+      ca: "Estudia direcció d'art a la ciutat que mai no deixa de crear.",
+      en: "Study art direction in the city that never stops creating.",
+    },
+    ctaApply: { es: "Inscríbete", ca: "Inscriu-te", en: "Apply" },
+  },
 } as const;
 
 type Translations = typeof translations;

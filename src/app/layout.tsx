@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n";
 import "./globals.css";
+
+const GA_ID = "G-49LENL6SCW";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -50,6 +53,20 @@ export default function RootLayout({
       lang="es"
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col grain">
         <I18nProvider>{children}</I18nProvider>
       </body>

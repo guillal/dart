@@ -94,6 +94,12 @@ export function Footer() {
               >
                 UAB
               </a>
+              <a
+                href="/faq"
+                className="text-muted-foreground hover:text-yellow transition-colors duration-300 block"
+              >
+                FAQ
+              </a>
             </div>
           </motion.div>
         </div>

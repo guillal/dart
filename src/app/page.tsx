@@ -4,6 +4,7 @@ import { ProgramAreas } from "@/components/program-areas";
 import { Curriculum } from "@/components/curriculum";
 import { Methodology } from "@/components/methodology";
 import { Testimonials } from "@/components/testimonials";
+import { Barcelona } from "@/components/barcelona";
 import { Faculty } from "@/components/faculty";
 import { Admission } from "@/components/admission";
 import { Footer } from "@/components/footer";
@@ -18,6 +19,7 @@ export default function Home() {
         <Methodology />
         <Curriculum />
         <Testimonials />
+        <Barcelona />
         <Faculty />
         <Admission />
       </main>

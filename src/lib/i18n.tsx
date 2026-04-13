@@ -366,6 +366,49 @@ const translations = {
     },
     applyNow: { es: "Inscríbete ahora", ca: "Inscriu-te ara", en: "Apply now" },
   },
+  barcelona: {
+    label: { es: "¿Por qué Barcelona?", ca: "Per què Barcelona?", en: "Why Barcelona?" },
+    heading: {
+      es: "La capital creativa del Mediterráneo",
+      ca: "La capital creativa del Mediterrani",
+      en: "The creative capital of the Mediterranean",
+    },
+    description: {
+      es: "Barcelona es una de las ciudades más creativas de Europa. Estudiar dirección de arte aquí no es solo una decisión académica — es sumergirte en un ecosistema de agencias, estudios, festivales y cultura visual que alimenta tu carrera desde el primer día.",
+      ca: "Barcelona és una de les ciutats més creatives d'Europa. Estudiar direcció d'art aquí no és només una decisió acadèmica — és submergir-te en un ecosistema d'agències, estudis, festivals i cultura visual que alimenta la teva carrera des del primer dia.",
+      en: "Barcelona is one of Europe's most creative cities. Studying art direction here isn't just an academic decision — it's immersing yourself in an ecosystem of agencies, studios, festivals and visual culture that fuels your career from day one.",
+    },
+    quote: {
+      es: "Barcelona no es solo donde estudias. Es donde empiezas a crear tu red, tu portfolio y tu carrera.",
+      ca: "Barcelona no és només on estudies. És on comences a crear la teva xarxa, el teu portfolio i la teva carrera.",
+      en: "Barcelona is not just where you study. It's where you start building your network, your portfolio and your career.",
+    },
+  },
+  faq: {
+    label: { es: "Preguntas frecuentes", ca: "Preguntes freqüents", en: "FAQ" },
+    heading: {
+      es: "Todo lo que necesitas saber",
+      ca: "Tot el que necessites saber",
+      en: "Everything you need to know",
+    },
+    description: {
+      es: "Respuestas a las preguntas más habituales sobre el Máster en Dirección de Arte y Comunicación de la UAB.",
+      ca: "Respostes a les preguntes més habituals sobre el Màster en Direcció d'Art i Comunicació de la UAB.",
+      en: "Answers to the most common questions about the Master in Art Direction and Communication at UAB.",
+    },
+    ctaTitle: {
+      es: "¿Tienes más preguntas?",
+      ca: "Tens més preguntes?",
+      en: "Have more questions?",
+    },
+    ctaDescription: {
+      es: "Escríbenos o solicita la admisión directamente.",
+      ca: "Escriu-nos o sol·licita l'admissió directament.",
+      en: "Write to us or apply directly.",
+    },
+    ctaApply: { es: "Inscríbete", ca: "Inscriu-te", en: "Apply" },
+    ctaContact: { es: "Contactar", ca: "Contactar", en: "Contact us" },
+  },
 } as const;
 
 type Translations = typeof translations;

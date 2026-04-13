@@ -44,9 +44,15 @@ export function Hero() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading font-bold text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] tracking-tight text-yellow"
+            className="font-heading font-bold text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] tracking-tight text-white"
           >
-            {t.hero.line2[locale]}
+            {locale === "es" ? (
+              <>de <span className="text-yellow">Ar</span>te</>
+            ) : locale === "ca" ? (
+              <>d&apos;<span className="text-yellow">Ar</span>t</>
+            ) : (
+              t.hero.line2[locale]
+            )}
           </motion.h1>
           <motion.h1
             initial={{ opacity: 0, y: 60 }}

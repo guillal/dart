@@ -52,7 +52,7 @@ const highlights = [
   },
   {
     number: "30'",
-    href: "https://www.uab.cat/web/la-facultat-de-ciencies-de-la-comunicacio-1345467741498.html",
+    href: "https://www.uab.cat/es/comunicacion",
     external: true,
     label: {
       es: "Campus UAB",

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useI18n, type Locale } from "@/lib/i18n";
 
@@ -127,6 +128,63 @@ const roster: RosterEntry[] = [
   { name: "Marc Vaillo Daniel", url: "https://www.imdb.com/name/nm0883249/" },
 ];
 
+function RosterToggle({ roster, locale, label }: { roster: RosterEntry[]; locale: Locale; label: string }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-3 group"
+      >
+        <svg
+          className={`w-5 h-5 text-yellow transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+          fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+        </svg>
+        <span className="text-xs uppercase tracking-[0.3em] text-yellow group-hover:text-white transition-colors duration-300">
+          {label}
+        </span>
+      </button>
+
+      <motion.div
+        initial={false}
+        animate={{
+          height: open ? "auto" : 0,
+          opacity: open ? 1 : 0,
+        }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        className="overflow-hidden"
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 pt-6">
+          {roster.map((entry) => (
+            <div key={entry.name}>
+              {entry.url ? (
+                <a
+                  href={entry.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-2.5 border-b border-white/5 text-sm text-muted-foreground hover:text-yellow transition-colors duration-300 flex items-center justify-between group"
+                >
+                  <span>{entry.name}</span>
+                  <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                </a>
+              ) : (
+                <div className="py-2.5 border-b border-white/5 text-sm text-muted-foreground">
+                  {entry.name}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
 export function Faculty() {
   const { locale, t } = useI18n();
 
@@ -163,12 +221,12 @@ export function Faculty() {
 
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <p className="font-heading font-bold text-4xl lg:text-5xl text-yellow">40%</p>
-                  <p className="text-muted-foreground text-sm mt-2">{t.faculty.doctors[locale]}</p>
+                  <p className="font-heading font-bold text-4xl lg:text-5xl text-yellow">60%</p>
+                  <p className="text-muted-foreground text-sm mt-2">{t.faculty.professionals[locale]}</p>
                 </div>
                 <div>
-                  <p className="font-heading font-bold text-4xl lg:text-5xl text-white">60%</p>
-                  <p className="text-muted-foreground text-sm mt-2">{t.faculty.professionals[locale]}</p>
+                  <p className="font-heading font-bold text-4xl lg:text-5xl text-white">40%</p>
+                  <p className="text-muted-foreground text-sm mt-2">{t.faculty.doctors[locale]}</p>
                 </div>
               </div>
             </div>
@@ -234,48 +292,8 @@ export function Faculty() {
           ))}
         </div>
 
-        {/* Full Roster */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-6"
-        >
-          <span className="text-xs uppercase tracking-[0.3em] text-yellow block">
-            {t.faculty.allFaculty[locale]}
-          </span>
-        </motion.div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-          {roster.map((entry, i) => (
-            <motion.div
-              key={entry.name}
-              initial={{ opacity: 0, x: 10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.02, duration: 0.4 }}
-            >
-              {entry.url ? (
-                <a
-                  href={entry.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-2.5 border-b border-white/5 text-sm text-muted-foreground hover:text-yellow transition-colors duration-300 flex items-center justify-between group"
-                >
-                  <span>{entry.name}</span>
-                  <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </a>
-              ) : (
-                <div className="py-2.5 border-b border-white/5 text-sm text-muted-foreground">
-                  {entry.name}
-                </div>
-              )}
-            </motion.div>
-          ))}
-        </div>
+        {/* Full Roster Toggle */}
+        <RosterToggle roster={roster} locale={locale} label={t.faculty.allFaculty[locale]} />
       </div>
     </section>
   );

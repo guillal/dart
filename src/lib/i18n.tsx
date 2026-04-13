@@ -289,7 +289,7 @@ const translations = {
       ca: "Els nostres professors no només ensenyen direcció d'art — la practiquen cada dia en agències, estudis i produccions.",
       en: "Our professors don't just teach art direction — they practice it every day in agencies, studios and productions.",
     },
-    featured: { es: "Destacados", ca: "Destacats", en: "Featured" },
+    featured: { es: "Quién te enseña", ca: "Qui t'ensenya", en: "Who teaches you" },
     allFaculty: { es: "Todo el profesorado", ca: "Tot el professorat", en: "All faculty" },
   },
   admission: {

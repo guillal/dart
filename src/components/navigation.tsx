@@ -13,11 +13,11 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
-    { href: "#programa", label: t.nav.programa[locale] },
-    { href: "#plan-de-estudios", label: t.nav.planEstudios[locale] },
-    { href: "#profesorado", label: t.nav.profesorado[locale] },
-    { href: "#admision", label: t.nav.admision[locale] },
-    { href: "#contacto", label: t.nav.contacto[locale] },
+    { href: "/#programa", label: t.nav.programa[locale] },
+    { href: "/#plan-de-estudios", label: t.nav.planEstudios[locale] },
+    { href: "/#profesorado", label: t.nav.profesorado[locale] },
+    { href: "/#admision", label: t.nav.admision[locale] },
+    { href: "/#contacto", label: t.nav.contacto[locale] },
   ];
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="/" className="flex items-center gap-3 group">
             <span className="font-heading font-bold text-xl tracking-tight">
               <span className="text-yellow">darc</span>
               <span className="text-white">.</span>

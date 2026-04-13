@@ -120,7 +120,7 @@ export function Hero() {
             </svg>
           </a>
           <a
-            href="#programa"
+            href="/#programa"
             className="inline-flex items-center justify-center border border-white/20 text-white font-medium px-8 py-4 text-base hover:border-yellow hover:text-yellow transition-colors duration-300"
           >
             {t.hero.cta2[locale]}

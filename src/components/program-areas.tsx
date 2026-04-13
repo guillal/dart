@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useI18n } from "@/lib/i18n";
 
 const numbers = ["01", "02", "03", "04"];
+const slugs = ["/publicidad", "/branding", "/fotografia", "/audiovisual"];
 
 export function ProgramAreas() {
   const { locale, t } = useI18n();
@@ -28,24 +30,31 @@ export function ProgramAreas() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/5">
           {t.areas.items.map((area, i) => (
-            <motion.div
-              key={numbers[i]}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-black p-8 lg:p-12 group hover:bg-card transition-colors duration-500"
-            >
-              <span className="text-yellow font-heading text-sm font-bold tracking-wider">
-                {numbers[i]}
-              </span>
-              <h3 className="font-heading font-bold text-2xl lg:text-3xl text-white mt-4 mb-6 group-hover:text-yellow transition-colors duration-500">
-                {area.title[locale]}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
-                {area.description[locale]}
-              </p>
-            </motion.div>
+            <Link key={numbers[i]} href={slugs[i]}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="bg-black p-8 lg:p-12 group hover:bg-card transition-colors duration-500 h-full"
+              >
+                <span className="text-yellow font-heading text-sm font-bold tracking-wider">
+                  {numbers[i]}
+                </span>
+                <h3 className="font-heading font-bold text-2xl lg:text-3xl text-white mt-4 mb-6 group-hover:text-yellow transition-colors duration-500">
+                  {area.title[locale]}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
+                  {area.description[locale]}
+                </p>
+                <span className="inline-flex items-center text-sm text-yellow/60 group-hover:text-yellow mt-6 transition-colors duration-500">
+                  {area.title[locale]}
+                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </motion.div>
+            </Link>
           ))}
         </div>
 

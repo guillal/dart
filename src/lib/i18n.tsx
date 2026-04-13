@@ -353,6 +353,19 @@ const translations = {
       en: "Master in Art Direction and Communication. Universitat Autònoma de Barcelona.",
     },
   },
+  areaPage: {
+    back: { es: "Áreas del programa", ca: "Àrees del programa", en: "Program areas" },
+    whatYoullLearn: { es: "Qué aprenderás", ca: "Què aprendràs", en: "What you'll learn" },
+    careers: { es: "Salidas profesionales", ca: "Sortides professionals", en: "Career paths" },
+    relatedModules: { es: "Módulos relacionados", ca: "Mòduls relacionats", en: "Related modules" },
+    readyTitle: { es: "¿Preparado/a para empezar?", ca: "Preparat/da per començar?", en: "Ready to start?" },
+    readyDescription: {
+      es: "Únete a la próxima edición del Máster en Dirección de Arte y Comunicación de la UAB.",
+      ca: "Uneix-te a la propera edició del Màster en Direcció d'Art i Comunicació de la UAB.",
+      en: "Join the next edition of the Master in Art Direction and Communication at UAB.",
+    },
+    applyNow: { es: "Inscríbete ahora", ca: "Inscriu-te ara", en: "Apply now" },
+  },
 } as const;
 
 type Translations = typeof translations;

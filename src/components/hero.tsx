@@ -18,17 +18,6 @@ export function Hero() {
       />
 
       <div className="max-w-7xl mx-auto w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="mb-8 lg:mb-12"
-        >
-          <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            {t.hero.uab[locale]}
-          </span>
-        </motion.div>
-
         <div className="space-y-2 lg:space-y-4">
           <motion.h1
             initial={{ opacity: 0, y: 60 }}
@@ -36,7 +25,11 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="font-heading font-bold text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] tracking-tight text-white"
           >
-            {t.hero.line1[locale]}
+            {locale !== "en" ? (
+              <><span className="text-yellow">D</span>{t.hero.line1[locale].slice(1)}</>
+            ) : (
+              t.hero.line1[locale]
+            )}
           </motion.h1>
           <motion.h1
             initial={{ opacity: 0, y: 60 }}
@@ -52,9 +45,23 @@ export function Hero() {
             transition={{ delay: 0.8, duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="font-heading font-bold text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] tracking-tight text-white"
           >
-            {t.hero.line3[locale]}
+            {locale !== "en" ? (
+              <>{t.hero.line3[locale].slice(0, 2)}<span className="text-yellow">C</span>{t.hero.line3[locale].slice(3)}</>
+            ) : (
+              t.hero.line3[locale]
+            )}
           </motion.h1>
         </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.0, duration: 0.8 }}
+          className="mt-6 text-sm lg:text-base uppercase tracking-[0.2em] text-muted-foreground"
+        >
+          {t.hero.masterTag[locale]} · Universitat Autònoma de{" "}
+          <span className="text-yellow">Barcelona</span>
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0 }}

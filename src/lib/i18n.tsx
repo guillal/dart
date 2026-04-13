@@ -19,6 +19,11 @@ const translations = {
       ca: "Universitat Autònoma de Barcelona",
       en: "Universitat Autònoma de Barcelona",
     },
+    masterTag: {
+      es: "Máster universitario",
+      ca: "Màster universitari",
+      en: "University master's degree",
+    },
     line1: { es: "Dirección", ca: "Direcció", en: "Art" },
     line2: { es: "de Arte", ca: "d'Art", en: "Direction" },
     line3: { es: "y Comunicación", ca: "i Comunicació", en: "& Communication" },

@@ -38,7 +38,7 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
           <a href="#" className="flex items-center gap-3 group">
             <span className="font-heading font-bold text-xl tracking-tight">
-              <span className="text-yellow">dart</span>
+              <span className="text-yellow">darc</span>
               <span className="text-white">.</span>
               <span className="text-white">barcelona</span>
             </span>
@@ -74,7 +74,9 @@ export function Navigation() {
             </div>
 
             <a
-              href="#admision"
+              href="https://www.uab.cat/web/master-en-direccion-de-arte-y-comunicacion/admision-1206597472150.html/d-Touch/param1-4879_es/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-yellow text-black text-sm font-semibold px-5 py-2.5 hover:bg-yellow-dark transition-colors duration-300"
             >
               {t.nav.inscribete[locale]}
@@ -147,7 +149,9 @@ export function Navigation() {
             </div>
 
             <motion.a
-              href="#admision"
+              href="https://www.uab.cat/web/master-en-direccion-de-arte-y-comunicacion/admision-1206597472150.html/d-Touch/param1-4879_es/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

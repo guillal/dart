@@ -289,8 +289,6 @@ const translations = {
     preinscripcion: { es: "Preinscripción abierta", ca: "Preinscripció oberta", en: "Pre-registration open" },
     cta: { es: "Inscríbete ahora", ca: "Inscriu-te ara", en: "Apply now" },
     details: [
-      { label: { es: "Inicio", ca: "Inici", en: "Start" }, value: "14 oct 2026" },
-      { label: { es: "Fin", ca: "Final", en: "End" }, value: "30 jun 2027" },
       { label: { es: "Modalidad", ca: "Modalitat", en: "Mode" }, value: { es: "Presencial", ca: "Presencial", en: "In-person" } },
       { label: { es: "Idioma", ca: "Idioma", en: "Language" }, value: { es: "Castellano", ca: "Castellà", en: "Spanish" } },
       { label: { es: "Precio", ca: "Preu", en: "Price" }, value: "5.730 €" },

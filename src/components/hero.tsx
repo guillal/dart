@@ -88,7 +88,9 @@ export function Hero() {
           className="mt-10 flex flex-col sm:flex-row gap-4"
         >
           <a
-            href="#admision"
+            href="https://www.uab.cat/web/master-en-direccion-de-arte-y-comunicacion/admision-1206597472150.html/d-Touch/param1-4879_es/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-yellow text-black font-semibold px-8 py-4 text-base hover:bg-yellow-dark transition-colors duration-300 group"
           >
             {t.hero.cta1[locale]}

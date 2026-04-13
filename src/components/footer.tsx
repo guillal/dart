@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
 
 const UAB_URL =
-  "https://www.uab.cat/web/master-en-direccion-de-arte-y-comunicacion/informacion-general-1206597472083.html/d-Touch/param1-4879_es/";
+  "https://www.uab.cat/web/master-en-direccion-de-arte-y-comunicacion/admision-1206597472150.html/d-Touch/param1-4879_es/";
 
 const CONTACT_EMAIL = "coordinacio.master.direccio.art.comunicacio@uab.cat";
 
@@ -22,7 +22,7 @@ export function Footer() {
             transition={{ duration: 0.6 }}
           >
             <span className="font-heading font-bold text-2xl tracking-tight">
-              <span className="text-yellow">dart</span>
+              <span className="text-yellow">darc</span>
               <span className="text-white">.barcelona</span>
             </span>
             <p className="text-muted-foreground text-sm mt-3 max-w-xs leading-relaxed">

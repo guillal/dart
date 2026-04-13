@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
 
 const UAB_URL =
-  "https://www.uab.cat/web/master-en-direccion-de-arte-y-comunicacion/informacion-general-1206597472083.html/d-Touch/param1-4879_es/";
+  "https://www.uab.cat/web/master-en-direccion-de-arte-y-comunicacion/admision-1206597472150.html/d-Touch/param1-4879_es/";
 
 const CONTACT_EMAIL = "coordinacio.master.direccio.art.comunicacio@uab.cat";
 
@@ -100,9 +100,8 @@ export function Admission() {
               <p className="text-black font-heading font-bold text-lg mb-2">
                 {t.admission.preinscripcion[locale]}
               </p>
-              <p className="text-black/70 text-sm mb-6">
-                Del 28/11/2025 al 09/10/2026
-              </p>
+
+
               <a
                 href={UAB_URL}
                 target="_blank"

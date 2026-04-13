@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "dart.barcelona — Máster en Dirección de Arte y Comunicación | UAB",
+  title: "darc.barcelona — Máster en Dirección de Arte y Comunicación | UAB",
   description:
     "Máster universitario de 60 ECTS en Dirección de Arte y Comunicación. Publicidad, branding, fotografía y audiovisual. Universitat Autònoma de Barcelona.",
   keywords: [
@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     "branding",
     "fotografía",
     "audiovisual",
-    "dart barcelona",
+    "darc barcelona",
   ],
-  metadataBase: new URL("https://dart.barcelona"),
+  metadataBase: new URL("https://darc.barcelona"),
   openGraph: {
-    title: "dart.barcelona — Máster en Dirección de Arte y Comunicación",
+    title: "darc.barcelona — Máster en Dirección de Arte y Comunicación",
     description:
       "Formamos directores de arte globales y estrategas. 60 ECTS. UAB Barcelona.",
     type: "website",
     locale: "es_ES",
-    url: "https://dart.barcelona",
+    url: "https://darc.barcelona",
   },
 };
 

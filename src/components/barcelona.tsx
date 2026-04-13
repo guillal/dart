@@ -37,7 +37,7 @@ const highlights = [
   },
   {
     number: "Gaudí",
-    href: "https://ajuntament.barcelona.cat/museudeldesign/",
+    href: "https://web.gencat.cat/es/generalitat/accio-govern/commemoracions/2026/any-gaudi",
     external: true,
     label: {
       es: "Herencia de diseño",

@@ -284,6 +284,13 @@ const translations = {
       ca: "Professionals en actiu en agències, productores i estudis de disseny",
       en: "Active professionals in agencies, production companies and design studios",
     },
+    spotlightIntro: {
+      es: "Nuestros profesores no solo enseñan dirección de arte — la practican cada día en agencias, estudios y producciones.",
+      ca: "Els nostres professors no només ensenyen direcció d'art — la practiquen cada dia en agències, estudis i produccions.",
+      en: "Our professors don't just teach art direction — they practice it every day in agencies, studios and productions.",
+    },
+    featured: { es: "Destacados", ca: "Destacats", en: "Featured" },
+    allFaculty: { es: "Todo el profesorado", ca: "Tot el professorat", en: "All faculty" },
   },
   admission: {
     label: { es: "Admisión y matrícula", ca: "Admissió i matrícula", en: "Admission & enrollment" },

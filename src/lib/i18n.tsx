@@ -374,6 +374,60 @@ const translations = {
     },
     applyNow: { es: "Inscríbete ahora", ca: "Inscriu-te ara", en: "Apply now" },
   },
+  leadForm: {
+    label: { es: "Contacta con nosotros", ca: "Contacta amb nosaltres", en: "Contact us" },
+    heading: {
+      es: "¿Tienes dudas?",
+      ca: "Tens dubtes?",
+      en: "Have questions?",
+    },
+    description: {
+      es: "Déjanos tus datos y te enviamos información completa del máster. Sin compromiso.",
+      ca: "Deixa'ns les teves dades i t'enviem informació completa del màster. Sense compromís.",
+      en: "Leave us your details and we'll send you full information about the master's. No commitment.",
+    },
+    fieldName: { es: "Nombre", ca: "Nom", en: "Name" },
+    fieldEmail: { es: "Email", ca: "Email", en: "Email" },
+    fieldInterest: { es: "¿Cuál es tu interés?", ca: "Quin és el teu interès?", en: "What are you interested in?" },
+    interestInfo: { es: "Quiero más información", ca: "Vull més informació", en: "I want more information" },
+    interestApply: { es: "Quiero inscribirme", ca: "Vull inscriure'm", en: "I want to apply" },
+    interestInternational: { es: "Soy estudiante internacional", ca: "Sóc estudiant internacional", en: "I'm an international student" },
+    interestOther: { es: "Otro", ca: "Altre", en: "Other" },
+    fieldMessage: { es: "Mensaje (opcional)", ca: "Missatge (opcional)", en: "Message (optional)" },
+    consent: {
+      es: "Acepto el tratamiento de mis datos para recibir información sobre el máster.",
+      ca: "Accepto el tractament de les meves dades per rebre informació sobre el màster.",
+      en: "I agree to my data being processed to receive information about the master's.",
+    },
+    submit: { es: "Enviar", ca: "Envia", en: "Send" },
+    submitting: { es: "Enviando…", ca: "Enviant…", en: "Sending…" },
+    successTitle: { es: "¡Mensaje enviado!", ca: "Missatge enviat!", en: "Message sent!" },
+    successDescription: {
+      es: "Te responderemos en los próximos días con toda la información.",
+      ca: "Et respondrem en els propers dies amb tota la informació.",
+      en: "We'll reply in the next few days with all the information.",
+    },
+    errorMissingFields: {
+      es: "Por favor, completa los campos obligatorios.",
+      ca: "Si us plau, completa els camps obligatoris.",
+      en: "Please complete the required fields.",
+    },
+    errorInvalidEmail: {
+      es: "El email no es válido.",
+      ca: "L'email no és vàlid.",
+      en: "The email is not valid.",
+    },
+    errorConsentRequired: {
+      es: "Debes aceptar el tratamiento de datos para enviar el formulario.",
+      ca: "Has d'acceptar el tractament de dades per enviar el formulari.",
+      en: "You must accept data processing to submit the form.",
+    },
+    errorGeneric: {
+      es: "No se ha podido enviar. Inténtalo de nuevo más tarde.",
+      ca: "No s'ha pogut enviar. Torna-ho a provar més tard.",
+      en: "Could not send. Please try again later.",
+    },
+  },
   rankings: {
     label: { es: "Rankings internacionales", ca: "Rànquings internacionals", en: "International rankings" },
     heading: {

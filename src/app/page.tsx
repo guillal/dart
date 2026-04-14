@@ -8,6 +8,7 @@ import { Rankings } from "@/components/rankings";
 import { Barcelona } from "@/components/barcelona";
 import { Faculty } from "@/components/faculty";
 import { Admission } from "@/components/admission";
+import { LeadForm } from "@/components/lead-form";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <Barcelona />
         <Faculty />
         <Admission />
+        <LeadForm />
       </main>
       <Footer />
     </>

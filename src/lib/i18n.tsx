@@ -374,6 +374,14 @@ const translations = {
     },
     applyNow: { es: "Inscríbete ahora", ca: "Inscriu-te ara", en: "Apply now" },
   },
+  rankings: {
+    label: { es: "Rankings internacionales", ca: "Rànquings internacionals", en: "International rankings" },
+    heading: {
+      es: "Una universidad entre las mejores del mundo",
+      ca: "Una universitat entre les millors del món",
+      en: "A university among the world's best",
+    },
+  },
   barcelona: {
     label: { es: "¿Por qué Barcelona?", ca: "Per què Barcelona?", en: "Why Barcelona?" },
     heading: {

@@ -13,6 +13,53 @@ function getRelatedSubjects(codes: string[], t: ReturnType<typeof useI18n>["t"])
   return t.curriculum.subjects.filter((s) => codes.includes(s.code));
 }
 
+function AreaSignature({ slug }: { slug: string }) {
+  // Each area gets a signature decorative mark — no images, just meaningful SVG
+  if (slug === "publicidad") {
+    // Creative duo — two parallel lines
+    return (
+      <svg viewBox="0 0 120 120" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth={2}>
+        <line x1="20" y1="30" x2="100" y2="30" />
+        <line x1="20" y1="90" x2="100" y2="90" />
+        <circle cx="20" cy="30" r="4" fill="currentColor" />
+        <circle cx="100" cy="90" r="4" fill="currentColor" />
+      </svg>
+    );
+  }
+  if (slug === "branding") {
+    // System — grid of dots
+    return (
+      <svg viewBox="0 0 120 120" className="w-full h-full" fill="currentColor">
+        {[20, 50, 80, 110].map((y) =>
+          [20, 50, 80, 110].map((x) => (
+            <circle key={`${x}-${y}`} cx={x - 5} cy={y - 5} r="3" />
+          ))
+        )}
+      </svg>
+    );
+  }
+  if (slug === "fotografia") {
+    // Aperture — concentric circles
+    return (
+      <svg viewBox="0 0 120 120" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth={2}>
+        <circle cx="60" cy="60" r="50" />
+        <circle cx="60" cy="60" r="30" />
+        <circle cx="60" cy="60" r="10" fill="currentColor" />
+      </svg>
+    );
+  }
+  if (slug === "audiovisual") {
+    // Play triangle with frame
+    return (
+      <svg viewBox="0 0 120 120" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth={2}>
+        <rect x="10" y="20" width="100" height="80" />
+        <path d="M48 45 L48 75 L78 60 Z" fill="currentColor" />
+      </svg>
+    );
+  }
+  return null;
+}
+
 export function AreaPageContent({ slug }: { slug: string }) {
   const { locale, t } = useI18n();
   const area = areas[slug] as AreaPageData;
@@ -42,7 +89,16 @@ export function AreaPageContent({ slug }: { slug: string }) {
         </div>
 
         {/* Hero */}
-        <section className="pt-12 lg:pt-20 pb-24 lg:pb-40 px-6 lg:px-8">
+        <section className="pt-12 lg:pt-20 pb-24 lg:pb-40 px-6 lg:px-8 relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute top-20 right-6 lg:right-12 w-32 h-32 lg:w-48 lg:h-48 text-yellow/20 pointer-events-none"
+          >
+            <AreaSignature slug={slug} />
+          </motion.div>
+
           <div className="max-w-7xl mx-auto">
             <motion.span
               initial={{ opacity: 0, y: 20 }}

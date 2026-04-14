@@ -11,6 +11,7 @@ const translations = {
     profesorado: { es: "Profesorado", ca: "Professorat", en: "Faculty" },
     admision: { es: "Admisión", ca: "Admissió", en: "Admission" },
     contacto: { es: "Contacto", ca: "Contacte", en: "Contact" },
+    faq: { es: "FAQ", ca: "FAQ", en: "FAQ" },
     inscribete: { es: "Inscríbete", ca: "Inscriu-te", en: "Apply" },
   },
   hero: {

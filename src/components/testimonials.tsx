@@ -30,7 +30,7 @@ export function Testimonials() {
   const { locale, t } = useI18n();
 
   return (
-    <section className="py-24 lg:py-40 px-6 lg:px-8 relative overflow-hidden">
+    <section className="py-20 lg:py-32 px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute -top-20 -left-10 text-[20rem] lg:text-[30rem] font-heading font-bold text-white/[0.02] leading-none select-none pointer-events-none">
         &ldquo;
       </div>
@@ -43,9 +43,12 @@ export function Testimonials() {
           transition={{ duration: 0.8 }}
           className="mb-16 lg:mb-24"
         >
-          <span className="text-xs uppercase tracking-[0.3em] text-yellow mb-4 block">
-            {t.testimonials.label[locale]}
-          </span>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="h-[1px] w-8 bg-yellow" />
+            <span className="text-xs uppercase tracking-[0.3em] text-yellow">
+              {t.testimonials.label[locale]}
+            </span>
+          </div>
           <h2 className="font-heading font-bold text-3xl lg:text-5xl text-white leading-[1.1]">
             {t.testimonials.heading[locale]}
           </h2>

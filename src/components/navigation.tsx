@@ -17,6 +17,7 @@ export function Navigation() {
     { href: "/#plan-de-estudios", label: t.nav.planEstudios[locale] },
     { href: "/#profesorado", label: t.nav.profesorado[locale] },
     { href: "/#admision", label: t.nav.admision[locale] },
+    { href: "/faq", label: t.nav.faq[locale] },
     { href: "/#contacto", label: t.nav.contacto[locale] },
   ];
 

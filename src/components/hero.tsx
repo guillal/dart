@@ -68,37 +68,44 @@ export function Hero() {
           </motion.h1>
         </div>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.0, duration: 0.8 }}
-          className="mt-6 text-sm lg:text-base uppercase tracking-[0.2em] text-muted-foreground"
+          className="mt-4 flex items-center gap-3"
         >
-          {t.hero.uab[locale]}
+          <span className="h-[1px] w-8 bg-yellow" />
+          <p className="text-xs lg:text-sm uppercase tracking-[0.2em] text-muted-foreground">
+            {t.hero.uab[locale]}
+          </p>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 1 }}
+          className="mt-10 lg:mt-14 text-base lg:text-lg text-muted-foreground max-w-md leading-relaxed"
+        >
+          {t.hero.subtitle[locale]}
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 1 }}
-          className="mt-10 lg:mt-16 flex flex-col sm:flex-row gap-6 sm:gap-12 items-start"
+          transition={{ delay: 1.35, duration: 1 }}
+          className="mt-8 flex gap-8 text-sm"
         >
-          <p className="text-base lg:text-lg text-muted-foreground max-w-md leading-relaxed">
-            {t.hero.subtitle[locale]}
-          </p>
-          <div className="flex gap-8 text-sm">
-            <div>
-              <p className="text-yellow font-heading font-bold text-2xl">60</p>
-              <p className="text-muted-foreground">ECTS</p>
-            </div>
-            <div>
-              <p className="text-yellow font-heading font-bold text-2xl">30</p>
-              <p className="text-muted-foreground">{t.hero.plazas[locale]}</p>
-            </div>
-            <div>
-              <p className="text-yellow font-heading font-bold text-2xl">3ª</p>
-              <p className="text-muted-foreground">{t.hero.edicion[locale]}</p>
-            </div>
+          <div>
+            <p className="text-yellow font-heading font-bold text-2xl">60</p>
+            <p className="text-muted-foreground">ECTS</p>
+          </div>
+          <div>
+            <p className="text-yellow font-heading font-bold text-2xl">30</p>
+            <p className="text-muted-foreground">{t.hero.plazas[locale]}</p>
+          </div>
+          <div>
+            <p className="text-yellow font-heading font-bold text-2xl">3ª</p>
+            <p className="text-muted-foreground">{t.hero.edicion[locale]}</p>
           </div>
         </motion.div>
 

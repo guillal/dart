@@ -286,11 +286,13 @@ const translations = {
       ca: "Doctors i acadèmics de diverses universitats espanyoles",
       en: "PhDs and academics from various Spanish universities",
     },
+    doctorsShort: { es: "Doctores", ca: "Doctors", en: "PhDs" },
     professionals: {
       es: "Profesionales en activo en agencias, productoras y estudios de diseño",
       ca: "Professionals en actiu en agències, productores i estudis de disseny",
       en: "Active professionals in agencies, production companies and design studios",
     },
+    professionalsShort: { es: "En activo", ca: "En actiu", en: "Active" },
     spotlightIntro: {
       es: "Nuestros profesores no solo enseñan dirección de arte — la practican cada día en agencias, estudios y producciones.",
       ca: "Els nostres professors no només ensenyen direcció d'art — la practiquen cada dia en agències, estudis i produccions.",

@@ -191,59 +191,66 @@ export function Faculty() {
   return (
     <section id="profesorado" className="py-24 lg:py-40 px-6 lg:px-8 bg-card">
       <div className="max-w-7xl mx-auto">
-        {/* Header + Director + Stats */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-24 lg:mb-32">
+        {/* Header + Manifesto + Stats */}
+        <div className="mb-24 lg:mb-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
+            className="mb-12 lg:mb-16"
           >
             <span className="text-xs uppercase tracking-[0.3em] text-yellow mb-4 block">
               {t.faculty.label[locale]}
             </span>
-            <h2 className="font-heading font-bold text-3xl lg:text-5xl text-white leading-[1.1] mb-8">
+            <h2 className="font-heading font-bold text-3xl lg:text-5xl text-white leading-[1.1]">
               {t.faculty.heading[locale]}
             </h2>
-
-            <div className="space-y-8">
-              <div className="border border-yellow/20 p-6 lg:p-8">
-                <span className="text-xs uppercase tracking-[0.2em] text-yellow">
-                  {t.faculty.director[locale]}
-                </span>
-                <p className="font-heading font-bold text-xl lg:text-2xl text-white mt-3">
-                  Guillem Marca Frances
-                </p>
-                <p className="text-muted-foreground text-sm mt-2">
-                  {t.faculty.department[locale]}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <p className="font-heading font-bold text-4xl lg:text-5xl text-yellow">60%</p>
-                  <p className="text-muted-foreground text-sm mt-2">{t.faculty.professionals[locale]}</p>
-                </div>
-                <div>
-                  <p className="font-heading font-bold text-4xl lg:text-5xl text-white">40%</p>
-                  <p className="text-muted-foreground text-sm mt-2">{t.faculty.doctors[locale]}</p>
-                </div>
-              </div>
-            </div>
           </motion.div>
 
-          {/* Spotlight intro text */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          {/* Manifesto quote */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-end"
+            className="border-l-2 border-yellow pl-6 lg:pl-8 text-xl lg:text-2xl text-white font-heading leading-relaxed max-w-3xl mb-16 lg:mb-20"
           >
-            <p className="text-lg lg:text-xl text-white/80 font-heading leading-relaxed max-w-md">
-              {t.faculty.spotlightIntro[locale]}
-            </p>
+            {t.faculty.spotlightIntro[locale]}
+          </motion.p>
+
+          {/* Stats — promoted to full-width, bigger presence */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/5"
+          >
+            <div className="bg-card p-8 lg:p-12">
+              <p className="font-heading font-bold text-5xl lg:text-7xl text-yellow leading-none mb-4">
+                60%
+              </p>
+              <p className="text-xs uppercase tracking-[0.2em] text-yellow mb-3">
+                {t.faculty.professionalsShort[locale]}
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
+                {t.faculty.professionals[locale]}
+              </p>
+            </div>
+            <div className="bg-card p-8 lg:p-12">
+              <p className="font-heading font-bold text-5xl lg:text-7xl text-white leading-none mb-4">
+                40%
+              </p>
+              <p className="text-xs uppercase tracking-[0.2em] text-white/70 mb-3">
+                {t.faculty.doctorsShort[locale]}
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
+                {t.faculty.doctors[locale]}
+              </p>
+            </div>
           </motion.div>
+
         </div>
 
         {/* Featured / Spotlight */}

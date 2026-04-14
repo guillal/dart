@@ -36,6 +36,72 @@ export function generateOGImage({ eyebrow, title, subtitle, accent }: OGParams) 
           }}
         />
 
+        {/* Duck stamp — bottom right corner */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "40px",
+            right: "40px",
+            width: "80px",
+            height: "80px",
+            backgroundColor: "#FFDE00",
+            display: "flex",
+          }}
+        >
+          {/* Body */}
+          <div
+            style={{
+              position: "absolute",
+              left: "20%",
+              top: "40%",
+              width: "76%",
+              height: "44%",
+              backgroundColor: "#000000",
+              borderRadius: "50%",
+              display: "flex",
+            }}
+          />
+          {/* Head */}
+          <div
+            style={{
+              position: "absolute",
+              left: "18%",
+              top: "20%",
+              width: "40%",
+              height: "40%",
+              backgroundColor: "#000000",
+              borderRadius: "50%",
+              display: "flex",
+            }}
+          />
+          {/* Beak */}
+          <div
+            style={{
+              position: "absolute",
+              left: "4%",
+              top: "36%",
+              width: "18%",
+              height: "10%",
+              backgroundColor: "#000000",
+              borderRadius: "4px",
+              display: "flex",
+            }}
+          />
+          {/* Eye */}
+          <div
+            style={{
+              position: "absolute",
+              left: "40%",
+              top: "32%",
+              width: "6%",
+              height: "6%",
+              backgroundColor: "#FFDE00",
+              borderRadius: "50%",
+              display: "flex",
+            }}
+          />
+        </div>
+
         {/* Big yellow accent number (right side, faded) */}
         {accent && (
           <div

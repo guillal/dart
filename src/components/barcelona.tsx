@@ -100,19 +100,22 @@ export function Barcelona() {
                 </p>
                 <p className="font-heading font-semibold text-white text-base mt-2 group-hover:text-yellow transition-colors duration-500 inline-flex items-center gap-2">
                   {item.label[locale]}
-                  {item.external ? (
+                  {item.external && (
                     <svg className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
-                    </svg>
-                  ) : (
-                    <svg className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   )}
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed mt-3">
                   {item.description[locale]}
                 </p>
+                {!item.external && (
+                  <motion.div
+                    animate={{ x: [0, 8, 0] }}
+                    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                    className="h-[1px] w-10 bg-gradient-to-r from-yellow to-transparent mt-5"
+                  />
+                )}
               </>
             );
 

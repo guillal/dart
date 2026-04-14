@@ -47,12 +47,11 @@ export function ProgramAreas() {
                 <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
                   {area.description[locale]}
                 </p>
-                <span className="inline-flex items-center text-sm text-yellow/60 group-hover:text-yellow mt-6 transition-colors duration-500">
-                  {area.title[locale]}
-                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
+                <motion.div
+                  animate={{ x: [0, 8, 0] }}
+                  transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                  className="h-[1px] w-12 bg-gradient-to-r from-yellow to-transparent mt-8"
+                />
               </motion.div>
             </Link>
           ))}

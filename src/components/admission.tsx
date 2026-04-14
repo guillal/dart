@@ -15,8 +15,6 @@ export function Admission() {
 
   return (
     <section id="admision" className="py-24 lg:py-40 px-6 lg:px-8 relative">
-      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-yellow via-yellow/50 to-transparent" />
-
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

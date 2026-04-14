@@ -10,15 +10,6 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-end pb-16 lg:pb-24 px-6 lg:px-8 overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-yellow to-transparent" />
-
-      <motion.div
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 1 }}
-        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute top-0 right-[8%] w-[3px] h-[40vh] bg-yellow origin-top hidden lg:block"
-      />
-
       <div className="max-w-7xl mx-auto w-full">
         <motion.p
           initial={{ opacity: 0, y: 20 }}

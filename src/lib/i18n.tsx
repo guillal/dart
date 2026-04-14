@@ -13,6 +13,12 @@ const translations = {
     contacto: { es: "Contacto", ca: "Contacte", en: "Contact" },
     faq: { es: "FAQ", ca: "FAQ", en: "FAQ" },
     inscribete: { es: "Inscríbete", ca: "Inscriu-te", en: "Apply" },
+    booking: { es: "Videollamada", ca: "Videotrucada", en: "Book a call" },
+    bookingLong: {
+      es: "Reserva una videollamada",
+      ca: "Reserva una videotrucada",
+      en: "Book a video call",
+    },
   },
   hero: {
     uab: {

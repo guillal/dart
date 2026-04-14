@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n";
+import { BookingProvider } from "@/components/booking-provider";
 import "./globals.css";
 
 const GA_ID = "G-49LENL6SCW";
@@ -68,7 +69,9 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="min-h-full flex flex-col grain">
-        <I18nProvider>{children}</I18nProvider>
+        <I18nProvider>
+          <BookingProvider>{children}</BookingProvider>
+        </I18nProvider>
       </body>
     </html>
   );

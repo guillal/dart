@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
+import { useBooking } from "@/components/booking-provider";
 
 export function Hero() {
   const { locale, t } = useI18n();
+  const booking = useBooking();
 
   return (
     <section className="relative min-h-screen flex flex-col justify-end pb-16 lg:pb-24 px-6 lg:px-8 overflow-hidden">
@@ -126,11 +128,17 @@ export function Hero() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
-          <a
-            href="/#programa"
+          <button
+            onClick={booking.open}
             className="inline-flex items-center justify-center border border-white/20 text-white font-medium px-8 py-4 text-base hover:border-yellow hover:text-yellow transition-colors duration-300"
           >
-            {t.hero.cta2[locale]}
+            {t.nav.bookingLong[locale]}
+          </button>
+          <a
+            href="/#programa"
+            className="inline-flex items-center justify-center text-muted-foreground hover:text-yellow font-medium px-2 py-4 text-base transition-colors duration-300"
+          >
+            {t.hero.cta2[locale]} →
           </a>
         </motion.div>
       </div>

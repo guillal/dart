@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useI18n, type Locale } from "@/lib/i18n";
+import { useBooking } from "@/components/booking-provider";
 
 const localeLabels: Record<Locale, string> = { es: "ES", ca: "CA", en: "EN" };
 const locales: Locale[] = ["es", "ca", "en"];
 
 export function Navigation() {
   const { locale, setLocale, t } = useI18n();
+  const booking = useBooking();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -73,6 +75,16 @@ export function Navigation() {
                 </button>
               ))}
             </div>
+
+            <button
+              onClick={booking.open}
+              className="text-sm text-white hover:text-yellow transition-colors duration-300 inline-flex items-center gap-2"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              {t.nav.booking[locale]}
+            </button>
 
             <a
               href="https://www.uab.cat/web/master-en-direccion-de-arte-y-comunicacion/admision-1206597472150.html/d-Touch/param1-4879_es/"
@@ -149,6 +161,19 @@ export function Navigation() {
               ))}
             </div>
 
+            <motion.button
+              onClick={() => {
+                setMobileOpen(false);
+                booking.open();
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: navLinks.length * 0.08 }}
+              className="border border-white/30 text-white text-lg font-medium px-8 py-3 mt-2 hover:border-yellow hover:text-yellow transition-colors duration-300"
+            >
+              {t.nav.bookingLong[locale]}
+            </motion.button>
+
             <motion.a
               href="https://www.uab.cat/web/master-en-direccion-de-arte-y-comunicacion/admision-1206597472150.html/d-Touch/param1-4879_es/"
               target="_blank"
@@ -156,8 +181,8 @@ export function Navigation() {
               onClick={() => setMobileOpen(false)}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: navLinks.length * 0.08 }}
-              className="bg-yellow text-black text-lg font-semibold px-8 py-3 mt-2"
+              transition={{ delay: navLinks.length * 0.08 + 0.08 }}
+              className="bg-yellow text-black text-lg font-semibold px-8 py-3"
             >
               {t.nav.inscribete[locale]}
             </motion.a>

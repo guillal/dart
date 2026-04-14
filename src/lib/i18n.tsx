@@ -382,6 +382,28 @@ const translations = {
     },
     applyNow: { es: "Inscríbete ahora", ca: "Inscriu-te ara", en: "Apply now" },
   },
+  notFound: {
+    heading: {
+      es: "Este patito se ha perdido",
+      ca: "Aquest aneguet s'ha perdut",
+      en: "This duck got lost",
+    },
+    description: {
+      es: "La página que buscas no existe o se ha movido. Volvamos al inicio.",
+      ca: "La pàgina que busques no existeix o s'ha mogut. Tornem a l'inici.",
+      en: "The page you're looking for doesn't exist or has moved. Let's go back home.",
+    },
+    cta: { es: "Volver a darc.barcelona", ca: "Tornar a darc.barcelona", en: "Back to darc.barcelona" },
+  },
+  cookies: {
+    message: {
+      es: "Usamos cookies analíticas (Google Analytics, LinkedIn) para entender cómo se usa el sitio. Sin tu consentimiento no se cargan.",
+      ca: "Usem cookies analítiques (Google Analytics, LinkedIn) per entendre com s'usa el lloc. Sense el teu consentiment no es carreguen.",
+      en: "We use analytics cookies (Google Analytics, LinkedIn) to understand how the site is used. They don't load without your consent.",
+    },
+    accept: { es: "Aceptar", ca: "Acceptar", en: "Accept" },
+    reject: { es: "Rechazar", ca: "Rebutjar", en: "Reject" },
+  },
   leadForm: {
     label: { es: "Contacta con nosotros", ca: "Contacta amb nosaltres", en: "Contact us" },
     heading: {
